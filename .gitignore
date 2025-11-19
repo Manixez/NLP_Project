@@ -1,0 +1,56 @@
+# Image Captioning Project - Git Ignore
+# =====================================
+
+# Dataset folder (large images + metadata)
+Dataset/
+dataset/
+
+# Documentation backup
+docs_backup/
+
+# FastText model (6.8 GB binary file)
+fasttext/
+*.bin
+*.bin.gz
+
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# Virtual environment
+NLP/
+venv/
+env/
+ENV/
+
+# Training outputs
+output/
+*.pth
+*.pkl
+*.npy
+
+# Logs
+logs/
+*.log
+
+# Jupyter Notebook
+.ipynb_checkpoints/
+*.ipynb
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Temporary files
+*.tmp
+*.bak
+*.cache
