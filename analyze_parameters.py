@@ -4,7 +4,8 @@ Model Parameter Analysis Script
 Script untuk menghitung jumlah parameter dan breakdown per layer
 """
 import sys
-sys.path.insert(0, '/home/manix/Documents/Semester 7/NLP/Kode')
+import os
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
 import torch
 import torch.nn as nn

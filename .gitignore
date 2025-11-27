@@ -8,6 +8,12 @@ dataset/
 # Documentation backup
 docs_backup/
 
+# Shell scripts and documentation
+TRANSFER_LEARNING_FASTTEXT.md
+setup.sh
+QUICKSTART.sh
+run_prepare_safe.sh
+
 # FastText model (6.8 GB binary file)
 fasttext/
 *.bin
@@ -54,3 +60,4 @@ Thumbs.db
 *.tmp
 *.bak
 *.cache
+

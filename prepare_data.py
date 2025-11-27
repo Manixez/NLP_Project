@@ -4,7 +4,8 @@ Preprocessing Script: Build Vocabulary & Embedding Matrix
 Jalankan script ini SEBELUM training untuk prepare vocabulary
 """
 import sys
-sys.path.insert(0, '/home/manix/Documents/Semester 7/NLP/Kode')
+import os
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
 from utils.dataset import load_metadata
 from utils.vocabulary import build_vocabulary_and_embeddings
