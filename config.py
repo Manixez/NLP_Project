@@ -37,7 +37,7 @@ SPECIAL_TOKENS = [PAD_TOKEN, START_TOKEN, END_TOKEN, UNK_TOKEN]
 
 # ==================== MODEL CONFIGURATION ====================
 # Encoder (CNN)
-CNN_MODEL = 'resnet50'  # Options: 'vgg16', 'resnet50', 'resnet101'
+CNN_MODEL = 'resnet101'  # Options: 'vgg16', 'resnet50', 'resnet101'
 IMG_SIZE = (224, 224)  # Input size for CNN
 ENCODED_IMAGE_SIZE = 14  # Spatial size (14x14 for VGG16, ResNet)
 

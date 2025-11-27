@@ -1,0 +1,328 @@
+
+================================================================================
+🚀 STARTING TRAINING PIPELINE
+================================================================================
+✅ Output directories created at /home/manix/Documents/Semester 7/NLP/Kode/output
+
+📚 Loading Vocabulary & Embeddings...
+📂 Loading vocabulary from /home/manix/Documents/Semester 7/NLP/Kode/output/vocab/vocab.pkl...
+📂 Loading embedding matrix from /home/manix/Documents/Semester 7/NLP/Kode/output/vocab/embedding_matrix.npy...
+✅ Loaded: Vocab size = 5751, Embedding shape = (5751, 300)
+
+📦 Preparing DataLoaders...
+
+============================================================
+📦 Preparing DataLoaders...
+============================================================
+📂 Loading metadata from /home/manix/Documents/Semester 7/NLP/Kode/Dataset/metadata.csv...
+   CSV columns: ['file_name', 'text']
+   Total rows: 40455
+   Format detected: file_name + text (multiple rows per image)
+   ✅ Loaded: 8091 unique images, 40455 total captions
+   📊 Average captions per image: 5.0
+   ✅ Loaded: 8091 unique images, 40455 total captions
+   📊 Average captions per image: 5.0
+
+📊 Dataset Split:
+   Training: 36409 samples
+   Validation: 4046 samples
+
+✅ DataLoaders ready!
+   Batch size: 32
+   Train batches: 1138
+   Val batches: 127
+
+🏗️  Building Models...
+   Encoder: vgg16
+   Decoder: LSTM (512 units)
+   Vocabulary: 5751 words
+   Device: cuda
+
+♻️  Resuming from output/saved_models/checkpoint_epoch_50.pth...
+   Resumed from epoch 50, best BLEU: 0.0760
+
+================================================================================
+🎓 FASE 1-4: TRAINING LOOP
+================================================================================
+
+================================================================================
+Epoch 51/150
+================================================================================
+Epoch [51][0/1138]	Batch Time 0.989 (0.989)	Loss 2.0289 (2.0289)
+Epoch [51][100/1138]	Batch Time 0.216 (0.222)	Loss 2.1001 (1.9803)
+Epoch [51][200/1138]	Batch Time 0.218 (0.220)	Loss 2.1657 (1.9836)
+Epoch [51][300/1138]	Batch Time 0.219 (0.220)	Loss 1.9703 (1.9804)
+Epoch [51][400/1138]	Batch Time 0.221 (0.220)	Loss 1.9701 (1.9833)
+Epoch [51][500/1138]	Batch Time 0.229 (0.221)	Loss 2.0863 (1.9842)
+Epoch [51][600/1138]	Batch Time 0.240 (0.224)	Loss 2.0526 (1.9885)
+Epoch [51][700/1138]	Batch Time 0.242 (0.226)	Loss 1.9572 (1.9903)
+Epoch [51][800/1138]	Batch Time 0.245 (0.228)	Loss 1.9847 (1.9920)
+Epoch [51][900/1138]	Batch Time 0.245 (0.230)	Loss 2.1924 (1.9956)
+Epoch [51][1000/1138]	Batch Time 0.249 (0.232)	Loss 1.9478 (2.0000)
+Epoch [51][1100/1138]	Batch Time 0.250 (0.234)	Loss 1.8484 (2.0019)
+
+✅ Training Loss: 2.0027
+
+📝 Sample Generated Caption:
+   Reference: pemain sepak bola di lapangan yang di sebelah kiri berseragam biru, yang di sebelah kanan berseragam putih dengan kipas angin di belakang.
+   Generated: dua pemain sepak bola sedang menjegal bola
+
+📊 Validation Results:
+   Loss: 2.9602
+   BLEU-2: 0.2132
+   BLEU-3: 0.1290
+   BLEU-4: 0.0785 ⭐ (used for model selection)
+
+💾 Checkpoint saved: /home/manix/Documents/Semester 7/NLP/Kode/output/saved_models/checkpoint_epoch_51.pth
+🏆 New best model saved: /home/manix/Documents/Semester 7/NLP/Kode/output/saved_models/best_model.pth (BLEU: 0.0785)
+
+================================================================================
+Epoch 52/150
+================================================================================
+Epoch [52][0/1138]	Batch Time 0.708 (0.708)	Loss 1.9677 (1.9677)
+Epoch [52][100/1138]	Batch Time 0.243 (0.247)	Loss 1.8991 (1.9471)
+Epoch [52][200/1138]	Batch Time 0.243 (0.245)	Loss 1.8508 (1.9589)
+Epoch [52][300/1138]	Batch Time 0.254 (0.247)	Loss 2.0627 (1.9671)
+Epoch [52][400/1138]	Batch Time 0.254 (0.249)	Loss 1.7056 (1.9720)
+Epoch [52][500/1138]	Batch Time 0.257 (0.250)	Loss 2.0725 (1.9732)
+Epoch [52][600/1138]	Batch Time 0.262 (0.252)	Loss 2.1693 (1.9744)
+Epoch [52][700/1138]	Batch Time 0.262 (0.253)	Loss 2.0233 (1.9766)
+Epoch [52][800/1138]	Batch Time 0.260 (0.254)	Loss 2.0328 (1.9780)
+Epoch [52][900/1138]	Batch Time 0.267 (0.255)	Loss 2.0149 (1.9805)
+Epoch [52][1000/1138]	Batch Time 0.264 (0.256)	Loss 1.6947 (1.9810)
+Epoch [52][1100/1138]	Batch Time 0.268 (0.257)	Loss 1.7811 (1.9832)
+
+✅ Training Loss: 1.9839
+
+📝 Sample Generated Caption:
+   Reference: pemain sepak bola di lapangan yang di sebelah kiri berseragam biru, yang di sebelah kanan berseragam putih dengan kipas angin di belakang.
+   Generated: dua pemain sepak bola berseragam merah sedang menjegal bola sementara pemain berbaju merah dan putih.
+
+📊 Validation Results:
+   Loss: 2.9575
+   BLEU-2: 0.2149
+   BLEU-3: 0.1311
+   BLEU-4: 0.0813 ⭐ (used for model selection)
+
+💾 Checkpoint saved: /home/manix/Documents/Semester 7/NLP/Kode/output/saved_models/checkpoint_epoch_52.pth
+🏆 New best model saved: /home/manix/Documents/Semester 7/NLP/Kode/output/saved_models/best_model.pth (BLEU: 0.0813)
+
+================================================================================
+Epoch 53/150
+================================================================================
+Epoch [53][0/1138]	Batch Time 0.658 (0.658)	Loss 1.9757 (1.9757)
+Epoch [53][100/1138]	Batch Time 0.263 (0.265)	Loss 1.8423 (1.9560)
+Epoch [53][200/1138]	Batch Time 0.264 (0.264)	Loss 1.9209 (1.9474)
+Epoch [53][300/1138]	Batch Time 0.263 (0.264)	Loss 1.9070 (1.9515)
+Epoch [53][400/1138]	Batch Time 0.267 (0.264)	Loss 1.9114 (1.9550)
+Epoch [53][500/1138]	Batch Time 0.273 (0.265)	Loss 1.9915 (1.9548)
+Epoch [53][600/1138]	Batch Time 0.272 (0.266)	Loss 1.9341 (1.9549)
+Epoch [53][700/1138]	Batch Time 0.262 (0.266)	Loss 1.7966 (1.9570)
+Epoch [53][800/1138]	Batch Time 0.269 (0.266)	Loss 1.6491 (1.9613)
+Epoch [53][900/1138]	Batch Time 0.268 (0.266)	Loss 1.8386 (1.9633)
+Epoch [53][1000/1138]	Batch Time 0.267 (0.267)	Loss 2.0029 (1.9669)
+Epoch [53][1100/1138]	Batch Time 0.268 (0.267)	Loss 1.8587 (1.9674)
+
+✅ Training Loss: 1.9677
+
+📝 Sample Generated Caption:
+   Reference: pemain sepak bola di lapangan yang di sebelah kiri berseragam biru, yang di sebelah kanan berseragam putih dengan kipas angin di belakang.
+   Generated: dua pemain sepak bola sedang bermain sepak bola.
+
+📊 Validation Results:
+   Loss: 2.9633
+   BLEU-2: 0.2141
+   BLEU-3: 0.1299
+   BLEU-4: 0.0800 ⭐ (used for model selection)
+
+💾 Checkpoint saved: /home/manix/Documents/Semester 7/NLP/Kode/output/saved_models/checkpoint_epoch_53.pth
+
+================================================================================
+Epoch 54/150
+================================================================================
+Epoch [54][0/1138]	Batch Time 0.677 (0.677)	Loss 1.8810 (1.8810)
+Epoch [54][100/1138]	Batch Time 0.262 (0.273)	Loss 2.0198 (1.9403)
+Epoch [54][200/1138]	Batch Time 0.265 (0.267)	Loss 2.0362 (1.9385)
+Epoch [54][300/1138]	Batch Time 0.260 (0.268)	Loss 2.0165 (1.9404)
+Epoch [54][400/1138]	Batch Time 0.267 (0.269)	Loss 1.9703 (1.9431)
+Epoch [54][500/1138]	Batch Time 0.267 (0.269)	Loss 1.9461 (1.9398)
+Epoch [54][600/1138]	Batch Time 0.269 (0.268)	Loss 1.9311 (1.9414)
+Epoch [54][700/1138]	Batch Time 0.267 (0.268)	Loss 1.9431 (1.9419)
+Epoch [54][800/1138]	Batch Time 0.267 (0.268)	Loss 1.8468 (1.9442)
+Epoch [54][900/1138]	Batch Time 0.266 (0.268)	Loss 1.6671 (1.9438)
+Epoch [54][1000/1138]	Batch Time 0.266 (0.268)	Loss 1.8873 (1.9473)
+Epoch [54][1100/1138]	Batch Time 0.269 (0.268)	Loss 2.1826 (1.9488)
+
+✅ Training Loss: 1.9498
+
+📝 Sample Generated Caption:
+   Reference: pemain sepak bola di lapangan yang di sebelah kiri berseragam biru, yang di sebelah kanan berseragam putih dengan kipas angin di belakang.
+   Generated: dua pemain sepak bola sedang menjegal bola sepak di lapangan.
+
+📊 Validation Results:
+   Loss: 2.9603
+   BLEU-2: 0.2175
+   BLEU-3: 0.1334
+   BLEU-4: 0.0825 ⭐ (used for model selection)
+
+💾 Checkpoint saved: /home/manix/Documents/Semester 7/NLP/Kode/output/saved_models/checkpoint_epoch_54.pth
+🏆 New best model saved: /home/manix/Documents/Semester 7/NLP/Kode/output/saved_models/best_model.pth (BLEU: 0.0825)
+
+================================================================================
+Epoch 55/150
+================================================================================
+Epoch [55][0/1138]	Batch Time 0.683 (0.683)	Loss 2.0132 (2.0132)
+Epoch [55][100/1138]	Batch Time 0.272 (0.274)	Loss 1.9729 (1.9121)
+Epoch [55][200/1138]	Batch Time 0.270 (0.272)	Loss 1.8090 (1.9175)
+Epoch [55][300/1138]	Batch Time 0.269 (0.271)	Loss 1.9463 (1.9252)
+Epoch [55][400/1138]	Batch Time 0.268 (0.271)	Loss 1.9602 (1.9209)
+Epoch [55][500/1138]	Batch Time 0.270 (0.271)	Loss 1.8684 (1.9227)
+Epoch [55][600/1138]	Batch Time 0.268 (0.270)	Loss 1.8726 (1.9266)
+Epoch [55][700/1138]	Batch Time 0.269 (0.270)	Loss 1.8338 (1.9297)
+Epoch [55][800/1138]	Batch Time 0.269 (0.270)	Loss 1.9098 (1.9312)
+Epoch [55][900/1138]	Batch Time 0.269 (0.270)	Loss 1.7604 (1.9332)
+Epoch [55][1000/1138]	Batch Time 0.269 (0.270)	Loss 1.8605 (1.9350)
+Epoch [55][1100/1138]	Batch Time 0.269 (0.270)	Loss 2.0939 (1.9353)
+
+✅ Training Loss: 1.9353
+
+📝 Sample Generated Caption:
+   Reference: pemain sepak bola di lapangan yang di sebelah kiri berseragam biru, yang di sebelah kanan berseragam putih dengan kipas angin di belakang.
+   Generated: dua pemain sepak bola berbaju merah sedang menjegal pemain sepak berbaju merah dan putih di sebuah pertandingan.
+
+📊 Validation Results:
+   Loss: 2.9646
+   BLEU-2: 0.2142
+   BLEU-3: 0.1307
+   BLEU-4: 0.0806 ⭐ (used for model selection)
+
+💾 Checkpoint saved: /home/manix/Documents/Semester 7/NLP/Kode/output/saved_models/checkpoint_epoch_55.pth
+
+================================================================================
+Epoch 56/150
+================================================================================
+Epoch [56][0/1138]	Batch Time 0.682 (0.682)	Loss 1.8982 (1.8982)
+Epoch [56][100/1138]	Batch Time 0.264 (0.269)	Loss 1.9398 (1.8965)
+Epoch [56][200/1138]	Batch Time 0.270 (0.269)	Loss 1.9200 (1.8939)
+Epoch [56][300/1138]	Batch Time 0.270 (0.269)	Loss 1.8738 (1.8903)
+Epoch [56][400/1138]	Batch Time 0.271 (0.269)	Loss 1.9145 (1.8992)
+Epoch [56][500/1138]	Batch Time 0.270 (0.270)	Loss 1.8819 (1.8999)
+Epoch [56][600/1138]	Batch Time 0.269 (0.270)	Loss 1.8763 (1.9017)
+Epoch [56][700/1138]	Batch Time 0.239 (0.267)	Loss 2.1974 (1.9060)
+Epoch [56][800/1138]	Batch Time 0.231 (0.263)	Loss 1.8176 (1.9096)
+Epoch [56][900/1138]	Batch Time 0.236 (0.260)	Loss 2.1049 (1.9131)
+Epoch [56][1000/1138]	Batch Time 0.235 (0.258)	Loss 1.9859 (1.9150)
+Epoch [56][1100/1138]	Batch Time 0.233 (0.255)	Loss 1.7366 (1.9187)
+
+✅ Training Loss: 1.9185
+
+📝 Sample Generated Caption:
+   Reference: pemain sepak bola di lapangan yang di sebelah kiri berseragam biru, yang di sebelah kanan berseragam putih dengan kipas angin di belakang.
+   Generated: dua pemain sepak bola sedang bermain sepak bola.
+
+📊 Validation Results:
+   Loss: 2.9661
+   BLEU-2: 0.2108
+   BLEU-3: 0.1282
+   BLEU-4: 0.0791 ⭐ (used for model selection)
+
+💾 Checkpoint saved: /home/manix/Documents/Semester 7/NLP/Kode/output/saved_models/checkpoint_epoch_56.pth
+
+================================================================================
+Epoch 57/150
+================================================================================
+Epoch [57][0/1138]	Batch Time 0.514 (0.514)	Loss 1.7889 (1.7889)
+Epoch [57][100/1138]	Batch Time 0.232 (0.233)	Loss 1.8872 (1.8880)
+Epoch [57][200/1138]	Batch Time 0.253 (0.239)	Loss 1.8728 (1.8825)
+Epoch [57][300/1138]	Batch Time 0.260 (0.244)	Loss 1.9379 (1.8869)
+Epoch [57][400/1138]	Batch Time 0.267 (0.250)	Loss 1.9879 (1.8853)
+Epoch [57][500/1138]	Batch Time 0.259 (0.252)	Loss 2.0134 (1.8893)
+Epoch [57][600/1138]	Batch Time 0.267 (0.254)	Loss 1.7989 (1.8935)
+Epoch [57][700/1138]	Batch Time 0.268 (0.256)	Loss 1.9054 (1.8974)
+Epoch [57][800/1138]	Batch Time 0.267 (0.257)	Loss 1.8241 (1.8990)
+Epoch [57][900/1138]	Batch Time 0.266 (0.258)	Loss 1.7318 (1.8996)
+Epoch [57][1000/1138]	Batch Time 0.268 (0.259)	Loss 2.0557 (1.9027)
+Epoch [57][1100/1138]	Batch Time 0.265 (0.260)	Loss 1.9151 (1.9044)
+
+✅ Training Loss: 1.9043
+
+📝 Sample Generated Caption:
+   Reference: pemain sepak bola di lapangan yang di sebelah kiri berseragam biru, yang di sebelah kanan berseragam putih dengan kipas angin di belakang.
+   Generated: dua pemain sepak bola berseragam merah sedang menjegal bola sementara pemain berbaju merah dan putih di lapangan sementara
+
+📊 Validation Results:
+   Loss: 2.9693
+   BLEU-2: 0.2100
+   BLEU-3: 0.1279
+   BLEU-4: 0.0793 ⭐ (used for model selection)
+
+💾 Checkpoint saved: /home/manix/Documents/Semester 7/NLP/Kode/output/saved_models/checkpoint_epoch_57.pth
+
+================================================================================
+Epoch 58/150
+================================================================================
+Epoch [58][0/1138]	Batch Time 0.639 (0.639)	Loss 1.9093 (1.9093)
+Epoch [58][100/1138]	Batch Time 0.263 (0.267)	Loss 1.8424 (1.8655)
+Epoch [58][200/1138]	Batch Time 0.266 (0.267)	Loss 1.7903 (1.8641)
+Epoch [58][300/1138]	Batch Time 0.266 (0.267)	Loss 1.7828 (1.8743)
+Epoch [58][400/1138]	Batch Time 0.270 (0.267)	Loss 1.8589 (1.8758)
+Epoch [58][500/1138]	Batch Time 0.269 (0.267)	Loss 1.8267 (1.8747)
+Epoch [58][600/1138]	Batch Time 0.268 (0.267)	Loss 1.6469 (1.8808)
+Epoch [58][700/1138]	Batch Time 0.269 (0.267)	Loss 1.9042 (1.8802)
+Epoch [58][800/1138]	Batch Time 0.268 (0.267)	Loss 2.0643 (1.8827)
+Epoch [58][900/1138]	Batch Time 0.269 (0.268)	Loss 2.0757 (1.8865)
+Epoch [58][1000/1138]	Batch Time 0.268 (0.268)	Loss 1.7263 (1.8874)
+Epoch [58][1100/1138]	Batch Time 0.272 (0.268)	Loss 1.8743 (1.8896)
+
+✅ Training Loss: 1.8900
+
+📝 Sample Generated Caption:
+   Reference: pemain sepak bola di lapangan yang di sebelah kiri berseragam biru, yang di sebelah kanan berseragam putih dengan kipas angin di belakang.
+   Generated: dua pemain sepak bola sedang menjegal bola
+
+📊 Validation Results:
+   Loss: 2.9655
+   BLEU-2: 0.2123
+   BLEU-3: 0.1297
+   BLEU-4: 0.0797 ⭐ (used for model selection)
+
+💾 Checkpoint saved: /home/manix/Documents/Semester 7/NLP/Kode/output/saved_models/checkpoint_epoch_58.pth
+
+================================================================================
+Epoch 59/150
+================================================================================
+Epoch [59][0/1138]	Batch Time 0.656 (0.656)	Loss 1.9219 (1.9219)
+Epoch [59][100/1138]	Batch Time 0.265 (0.271)	Loss 1.9984 (1.8404)
+Epoch [59][200/1138]	Batch Time 0.268 (0.269)	Loss 1.8100 (1.8435)
+Epoch [59][300/1138]	Batch Time 0.269 (0.269)	Loss 1.8029 (1.8508)
+Epoch [59][400/1138]	Batch Time 0.268 (0.268)	Loss 1.8895 (1.8562)
+Epoch [59][500/1138]	Batch Time 0.267 (0.268)	Loss 1.7948 (1.8591)
+Epoch [59][600/1138]	Batch Time 0.272 (0.268)	Loss 1.9105 (1.8613)
+Epoch [59][700/1138]	Batch Time 0.272 (0.269)	Loss 2.0029 (1.8659)
+Epoch [59][800/1138]	Batch Time 0.274 (0.269)	Loss 1.8322 (1.8670)
+Epoch [59][900/1138]	Batch Time 0.267 (0.270)	Loss 1.9183 (1.8685)
+Epoch [59][1000/1138]	Batch Time 0.277 (0.270)	Loss 1.9412 (1.8708)
+Epoch [59][1100/1138]	Batch Time 0.267 (0.269)	Loss 1.7719 (1.8726)
+
+✅ Training Loss: 1.8738
+
+📝 Sample Generated Caption:
+   Reference: pemain sepak bola di lapangan yang di sebelah kiri berseragam biru, yang di sebelah kanan berseragam putih dengan kipas angin di belakang.
+   Generated: dua pemain sepak bola sedang menjegal bola sementara yang lain menonton.
+
+📊 Validation Results:
+   Loss: 2.9676
+   BLEU-2: 0.2126
+   BLEU-3: 0.1294
+   BLEU-4: 0.0799 ⭐ (used for model selection)
+
+💾 Checkpoint saved: /home/manix/Documents/Semester 7/NLP/Kode/output/saved_models/checkpoint_epoch_59.pth
+
+⏹️  Early stopping triggered (patience: 5)
+   Best BLEU: 0.0825
+
+================================================================================
+🎉 TRAINING SELESAI!
+   Best BLEU-4: 0.0825
+   Best model: /home/manix/Documents/Semester 7/NLP/Kode/output/saved_models/best_model.pth
+================================================================================

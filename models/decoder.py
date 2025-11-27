@@ -61,11 +61,11 @@ class DecoderLSTM(nn.Module):
         self.fc = nn.Linear(hidden_size, vocab_size)
         
         # Layer untuk init LSTM hidden state dari CNN features
-        # CNN output ResNet50: (batch, 14, 14, 2048) -> flatten -> init hidden
+        # CNN output ResNet101: (batch, 14, 14, 2048) -> flatten -> init hidden
         # Kita akan terima global average pooled features: (batch, feature_dim)
         
-        self.init_h = nn.Linear(2048, hidden_size)  # Init h0 (ResNet50: 2048)
-        self.init_c = nn.Linear(2048, hidden_size)  # Init c0 (ResNet50: 2048)
+        self.init_h = nn.Linear(2048, hidden_size)  # Init h0 (ResNet101: 2048)
+        self.init_c = nn.Linear(2048, hidden_size)  # Init c0 (ResNet101: 2048)
     
     def init_hidden_state(self, encoder_out):
         """

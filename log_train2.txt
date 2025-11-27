@@ -1,0 +1,48 @@
+
+================================================================================
+🚀 STARTING TRAINING PIPELINE
+================================================================================
+✅ Output directories created at /home/manix/Documents/Semester 7/NLP/Kode/output
+
+📚 Loading Vocabulary & Embeddings...
+📂 Loading vocabulary from /home/manix/Documents/Semester 7/NLP/Kode/output/vocab/vocab.pkl...
+📂 Loading embedding matrix from /home/manix/Documents/Semester 7/NLP/Kode/output/vocab/embedding_matrix.npy...
+✅ Loaded: Vocab size = 5751, Embedding shape = (5751, 300)
+
+📦 Preparing DataLoaders...
+
+============================================================
+📦 Preparing DataLoaders...
+============================================================
+📂 Loading metadata from /home/manix/Documents/Semester 7/NLP/Kode/Dataset/metadata.csv...
+   CSV columns: ['file_name', 'text']
+   Total rows: 40455
+   Format detected: file_name + text (multiple rows per image)
+   ✅ Loaded: 8091 unique images, 40455 total captions
+   📊 Average captions per image: 5.0
+   ✅ Loaded: 8091 unique images, 40455 total captions
+   📊 Average captions per image: 5.0
+
+📊 Dataset Split:
+   Training: 36409 samples
+   Validation: 4046 samples
+
+✅ DataLoaders ready!
+   Batch size: 32
+   Train batches: 1138
+   Val batches: 127
+
+🏗️  Building Models...
+Downloading: "https://download.pytorch.org/models/resnet101-63fe2227.pth" to /home/manix/.cache/torch/hub/checkpoints/resnet101-63fe2227.pth
+   Encoder: resnet101
+   Decoder: LSTM (512 units)
+   Vocabulary: 5751 words
+   Device: cuda
+
+================================================================================
+🎓 FASE 1-4: TRAINING LOOP
+================================================================================
+
+================================================================================
+Epoch 1/50
+================================================================================
